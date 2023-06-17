@@ -1,0 +1,39 @@
+{
+  "name": "Internet Cleaner",
+  "description": "인터넷 상의 혐오 표현으로부터 보호해주는 확장 프로그램",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "scripts/toolkit.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://everytime.kr/"
+      ],
+      "js": [
+        "scripts/everytime/toolkit/main-page.js",
+        "scripts/everytime/loader/main-page.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://everytime.kr/*/v/*"
+      ],
+      "js": [
+        "scripts/everytime/toolkit/main-page.js",
+        "scripts/everytime/toolkit/post-page.js",
+        "scripts/everytime/loader/post-page.js"
+      ]
+    }
+  ],
+  "host_permissions": [
+    "*://everytime.kr/*",
+    "*://127.0.0.1/*"
+  ]
+}
