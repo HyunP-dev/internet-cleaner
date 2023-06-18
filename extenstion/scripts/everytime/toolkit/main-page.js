@@ -3,6 +3,7 @@ function censorListElements() {
      * @type {Element[]}
      */
     let doms = Array.from(document.querySelectorAll(".board .list"))
+
     for (let dom of doms) {
         let paragraphDom = dom.querySelector("p")
         filter(paragraphDom.innerText).then(isSafe => {

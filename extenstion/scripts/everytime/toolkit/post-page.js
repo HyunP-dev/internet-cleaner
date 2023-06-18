@@ -1,5 +1,6 @@
 function censorArticle() {
     let article = document.querySelector("article .article")
+    while (article == null) article = document.querySelector("article .article")
     let titleDom = article.querySelector("h2")
     let paragraphDom = article.querySelector("p")
     filter(titleDom.innerText + " " + paragraphDom.innerText).then(isSafe => {

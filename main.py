@@ -37,5 +37,4 @@ app.add_middleware(
 
 @app.post("/check/")
 async def check(sentence: Sentence):
-    return pipe(sentence.sentence)[0][-1]["score"] > 0.5
-
+    return pipe(sentence.sentence)[0][-1]["score"] > 0.7

@@ -1,4 +1,5 @@
 window.onload = () => {
+    console.log(document.body)
     censorArticle()
     censorComments()
 
